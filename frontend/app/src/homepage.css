@@ -1,0 +1,236 @@
+/*.. Background image for header.*/
+.load {
+  animation: slide 2s;
+}
+.slider {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  width: 100%;
+  height: 100vh;
+  animation: slide 10s infinite;
+}
+.content {
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(233, 236, 239, 0);
+}
+.principle {
+  display: flex;
+  justify-content: space-around;
+}
+@keyframes slide {
+  0% {
+    background-image: url(image/donald.jpg);
+  }
+  50% {
+    background-image: url(image/donald.jpg);
+  }
+  50.1% {
+    background-image: url(image/donald.jpg);
+  }
+  100% {
+    background-image: url(image/donald.jpg);
+  }
+}
+
+/* Header section */
+.header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Navbar styling */
+.bgi2 {
+  background-color: rgba(233, 236, 239, 0.2);
+  margin: 5px 25px;
+  border-radius: 20px;
+}
+
+.navbar {
+  padding: 15px 20px;
+}
+
+.navbar-brand {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: bold;
+  color: white !important;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffd700 !important; /* Gold hover effect */
+}
+
+/* Offcanvas styling */
+.offcanvas {
+  background: rgba(0, 123, 255, 0.9) !important;
+  color: white;
+}
+
+.offcanvas-title {
+  color: white;
+}
+
+/* Landing page section */
+.landingpage_head {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 60vh;
+}
+
+.landingpage_center {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.landingpage_center h3 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: #141145;
+  margin-bottom: 10px;
+}
+
+.landingpage_center h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: bold;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.landingpage_center h6 {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  line-height: 1.6;
+  margin: 10px 0;
+  color: white;
+  max-width: 600px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+
+  .landingpage_center h1 {
+    font-size: 2.5rem;
+  }
+
+  .landingpage_center h3 {
+    font-size: 1.2rem;
+  }
+
+  .landingpage_center h6 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .landingpage_center {
+    padding: 10px;
+  }
+
+  .landingpage_center h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Popup styles */
+.install-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Above other content */
+}
+
+.popup-content {
+  background: #e9ecef; /* Light gray background */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #141145; /* Dark blue */
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: #343a40; /* Dark gray for readability */
+  margin-bottom: 20px;
+}
+
+.install-button {
+  background: #141145; /* Dark blue */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.install-button:hover {
+  background: #ffd700; /* Gold on hover */
+  color: #141145;
+}
+
+.dismiss-button {
+  background: transparent;
+  color: #141145;
+  border: 1px solid #141145;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.dismiss-button:hover {
+  color: #ffd700;
+  border-color: #ffd700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .popup-content {
+    padding: 15px;
+    width: 85%;
+  }
+
+  .popup-content h2 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+
+  .popup-content p {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+}
